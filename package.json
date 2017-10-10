@@ -1,0 +1,31 @@
+{
+  "name": "messanger",
+  "version": "1.0.0",
+  "description": "this is messanger app for chating",
+  "main": "server.js",
+  "scripts": {
+    "test": "chatd",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "messanger",
+    "chat"
+  ],
+  "author": "chandrashekar Mungi",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "express-session": "^1.15.5",
+    "http": "0.0.0",
+    "mongoose": "^4.11.9",
+    "morgan": "^1.8.2",
+    "path": "^0.12.7",
+    "pug": "^2.0.0-rc.3",
+    "session.socket.io": "^0.2.1",
+    "socket.io": "^2.0.3"
+  }
+}
