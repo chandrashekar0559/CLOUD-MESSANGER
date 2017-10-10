@@ -1,0 +1,65 @@
+doctype html
+html(lang='en')
+  head
+    title Messanger | Chat with your buddy
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='shortcut icon', href='http://www.clker.com/cliparts/x/6/b/j/h/z/shopping-cart-md.png')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    style.
+      /* Remove the navbar's default rounded borders and increase the bottom margin */
+      .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+      }
+      /* Remove the jumbotron's default bottom margin */
+      .jumbotron {
+      margin-bottom: 0;
+      }
+      /* Add a gray background color and some padding to the footer */
+      footer {
+      background-color: #555;
+      padding: 15px;
+      color: white;
+      }
+      .navbar-brand {
+      float: left;
+      height: 66px;
+      padding: 0px 15px;
+      font-size: 18px;
+      line-height: 20px;
+      }
+  
+  body
+    nav.navbar.navbar-inverse
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        #myNavbar.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a(href='http://localhost:8086/users/login') Login
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='http://localhost:8086/users/dashboard')
+                span.glyphicon.glyphicon-user
+                |  Your Account
+           
+    .container
+      .row
+
+
+        .col-md-4.col-md-offset-4
+          h1 Error!
+          h3  #{message} 
+
+
+    footer.container-fluid.text-center
+      h2  © ChandraShekar Mungi
+
+
