@@ -1,0 +1,71 @@
+doctype html
+html(lang='en')
+  head
+    title Messanger | Chat with your buddy
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='shortcut icon', href='http://www.iconeasy.com/icon/ico/System/Tokens/Shiny%20messenger.ico')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    style.
+      /* Remove the navbar's default rounded borders and increase the bottom margin */
+      .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+      }
+      /* Remove the jumbotron's default bottom margin */
+      .jumbotron {
+      margin-bottom: 0;
+      }
+      /* Add a gray background color and some padding to the footer */
+      footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+      }
+      .navbar-brand {
+      float: left;
+      height: 66px;
+      padding: 0px 15px;
+      font-size: 18px;
+      line-height: 20px;
+      }
+      footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+      }
+    script.
+      $(document).ready(function(){
+      var user = $("#user").text();
+      $("#getLink").click(function(){
+      document.getElementById("getLink").href = "http://localhost:8086/users/chat/"+user;
+      });
+      });
+  body
+    nav.navbar.navbar-inverse
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        #myNavbar.collapse.navbar-collapse
+         
+
+          ul.nav.navbar-nav
+            li
+              a#getLink(href='') Chat
+    .container
+      .row
+
+
+        .col-md-4.col-md-offset-4
+           h5 Your email is #{user.email}
+           h4#user #{user.userName}
+           h5
+              a(href='http://localhost:8086/users/logout') logout
+
+
+    footer.container-fluid.text-center
+      h2  © ChandraShekar Mungi
